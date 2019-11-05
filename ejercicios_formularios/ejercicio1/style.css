@@ -1,0 +1,41 @@
+
+h1{
+ font-size: 1.6rem ;
+ color:blue   ;
+}
+h2{
+    font-size: 1.2rem ;
+    color:black;
+    font-style: italic; 
+}
+
+form{
+    width: 100%;
+    border: 1px dashed  cyan;    
+    padding: 5px;
+}
+label{
+    font-weight: bold;
+    margin-right: 30px 
+}
+textarea{
+    width: 500px;
+    height: 300px;
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 100px ;
+    min-height: 100px ;
+    
+}
+
+
+.contenedor{
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+.elemento{
+    display: flex;
+    padding: 10px 0;
+    width: 100%;
+}
