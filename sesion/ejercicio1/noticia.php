@@ -1,5 +1,13 @@
+<?php
+session_start() ;
+$nombreUsu=isset($_SESSION['usuario'])?$_SESSION['usuario']:"";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
+
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +18,18 @@
 </head>
 
 <body>
+
+
+<?php
+
+if($nombreUsu == ''){
+    echo "<h1>No tiene acceso</h1>";
+    echo "<p>Tiene que loguearse</p>";
+    echo "<a href='index.php'>Login</a>";
+}else{
+?>
+
+
     <div class='contenedor'>
 
     
@@ -45,6 +65,10 @@
         </form>
     </div>
 
+<?php
+}
+?>
 </body>
 
 </html>
+

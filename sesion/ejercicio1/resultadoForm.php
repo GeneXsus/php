@@ -1,13 +1,33 @@
+<?php
+session_start() ;
+$nombreUsu=isset($_SESSION['usuario'])?$_SESSION['usuario']:"";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formulario</title>
+    <title>Resultado</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
+
+
+<?php
+
+if($nombreUsu == ''){
+    echo "<h1>No tiene acceso</h1>";
+    echo "<p>Tiene que loguearse</p>";
+    echo "<a href='index.php'>Login</a>";
+}else{
+?>
 <h1>Subida de ficheros</h1>
 <h2>Resultado de la insercion de nueva noticia</h2>
     <?php 
@@ -40,5 +60,8 @@
         echo ('<li>imagen:  <img src="'.$nombreDirectorio . $nombreFichero.'" alt="'.$nombreFichero.'" /></li>');
         echo('</ul>');
     ?> 
+    <?php
+}
+?>
 </body>
 </html>
